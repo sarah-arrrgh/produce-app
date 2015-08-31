@@ -6,6 +6,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -19,13 +20,23 @@ body {
   margin-top: 50px;
 }
 
-.this-page {
+.navbar-fixed-top .this-page {
   background-color: rgb(231, 231, 231);
   color: rgb(85, 85, 85);
   display: block;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 15px;
 }
+
+.copyright{
+  color: #777;
+  padding-top: 20px;
+}
+
+.footer nav {
+  padding-top: 20px;
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
