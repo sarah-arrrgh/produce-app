@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
 
-before_filter :set_title
+  before_filter :set_title
 
   def index
   end
