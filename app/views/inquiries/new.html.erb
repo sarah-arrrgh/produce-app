@@ -1,10 +1,24 @@
+<% if @inquiry.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@inquiry.errors.count, "issue") %> prevented your message from being sent:
+    </h2>
+
+    <ul>
+    <% @inquiry.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <article>
   <header class="page-header">
     <h1>Send us an email!</h1>
   </header>
   <div class="row">
     <div class="col-sm-6">
-      <%= form_for :inquiry do |f| %>
+      <%= form_for @inquiry, url: contact_path do |f| %>
         <div class="form-group">
           <%= f.label :name %>
           <%= f.text_field :name, class: "form-control" %>
