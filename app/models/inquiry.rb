@@ -1,3 +1,3 @@
 class Inquiry
-  attr_accessor :name, :email, :message
+  attr_accessor :name, :email, :subject, :message
 end

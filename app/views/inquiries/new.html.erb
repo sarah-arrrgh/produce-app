@@ -1,6 +1,6 @@
 <article>
   <header class="page-header">
-    <h1>Contact us</h1>
+    <h1>Send us an email!</h1>
   </header>
   <div class="row">
     <div class="col-sm-6">
@@ -12,6 +12,10 @@
         <div class="form-group">
           <%= f.label :email %>
           <%= f.email_field :email, class: "form-control" %>
+        </div>
+        <div class="form-group">
+          <%= f.label :subject %>
+          <%= f.text_field :subject, class: "form-control" %>
         </div>
         <div class="form-group">
           <%= f.label :message %>

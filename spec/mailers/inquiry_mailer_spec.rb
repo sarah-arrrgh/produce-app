@@ -9,7 +9,8 @@ RSpec.describe InquiryMailer, type: :mailer do
     @inquiry = Inquiry.new
     @inquiry.name = "Gypsy"
     @inquiry.email = "gypsy@goo.com"
-    @inquiry.message = "A bunch of baby ducks. Send them to the moon."
+    @inquiry.subject = "A bunch of baby ducks"
+    @inquiry.message = "Send them to the moon."
 
     InquiryMailer.inquiry_email(@inquiry).deliver_now
   end
@@ -26,8 +27,12 @@ RSpec.describe InquiryMailer, type: :mailer do
     expect(ActionMailer::Base.deliveries.first.to).to eq([ @inquiry.email ])
   end
 
+  it 'should set the subject to the correct subject' do
+  expect(ActionMailer::Base.deliveries.first.subject).to eq("A bunch of baby ducks")
+end
+
   it 'renders the sender email' do
-    expect(ActionMailer::Base.deliveries.first.from).to eq([ "from@example.com" ])
+    expect(ActionMailer::Base.deliveries.first.from).to eq([ "sarah@petonecoop.co.nz" ])
   end
 
 
