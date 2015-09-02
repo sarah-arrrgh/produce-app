@@ -14,8 +14,8 @@ class SiteController < ApplicationController
   def terms
   end
 
-  private
-    def set_title
-      @title = "Co-op App"
-    end
+  # private
+  #   def set_title
+  #     @title = "Co-op App"
+  #   end
 end

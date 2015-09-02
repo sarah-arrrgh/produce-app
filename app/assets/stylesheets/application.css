@@ -28,6 +28,10 @@ body {
   padding: 15px;
 }
 
+.messages{
+  margin-top: 20px;
+}
+
 .copyright{
   color: #777;
   padding-top: 20px;
